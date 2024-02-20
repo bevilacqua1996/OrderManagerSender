@@ -19,10 +19,8 @@ public class CustomSerializer implements Serializer<OrderRequest> {
     public byte[] serialize(String topic, OrderRequest data) {
         try {
             if (data == null){
-                System.out.println("Null received at serializing");
                 return null;
             }
-            System.out.println("Serializing...");
             return objectMapper.writeValueAsBytes(data);
         } catch (Exception e) {
             throw new SerializationException("Error when serializing OrderRequest to byte[]");
