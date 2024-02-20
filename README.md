@@ -2,6 +2,12 @@
 
 Kafka sender to create new orders for Order Manager System.
 
+## Description
+
+This microservice works integrated with [Order Manager](https://github.com/bevilacqua1996/OrderManager).
+Basically, this is microservice which implements the Kafka Producer which is going to publish messages in specific topic (external-orders).
+On the other side (Order Manager project) we have a Kafka Consumer implemented in order to pull the messages published by the producer and create this new orders.
+
 ## How to run
 
 ``mvn spring-boot:run``
